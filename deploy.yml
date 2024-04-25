@@ -11,7 +11,7 @@
     - name: install python-pip
       yum: name=python-pip state=present update_cache=yes
     - name: Install docker python
-      pip: name=docker-py
+      pip: name=docker-py extra_args=--break-system-packages
   tasks:
     - name: Create Apache container
       docker_container:
